@@ -1,0 +1,217 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-15T18:39:13.654Z",
+    "end": "2023-07-15T18:39:13.760Z",
+    "duration": 106,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d7897543-6d0c-46e9-b3bc-8d73d6c0dbed",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "871606a9-7f49-4696-a3b9-3a92a23cf423",
+          "title": "fetching all users",
+          "fullFile": "E:\\Vs Code\\CodeBoxx\\BackendYTsubscriberProject\\_test\\controllers.test.js",
+          "file": "\\_test\\controllers.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "gets all users",
+              "fullTitle": "fetching all users gets all users",
+              "timedOut": false,
+              "duration": 52,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai\n  .request(\"http://localhost:3000\")\n  .get(\"/subscribers\")\n  .end((err, res) => {\n    if (err) {\n      console.log(err);\n    } else {\n      res.body.should.be.a(\"array\");\n      res.should.have.status(200);\n    }\n    done();\n  });",
+              "err": {},
+              "uuid": "165fa878-8457-4aab-a2d3-1a64663ace70",
+              "parentUUID": "871606a9-7f49-4696-a3b9-3a92a23cf423",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "165fa878-8457-4aab-a2d3-1a64663ace70"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "44cbe6c2-604e-451f-bb66-abf6ea258cce",
+          "title": "users with filter",
+          "fullFile": "E:\\Vs Code\\CodeBoxx\\BackendYTsubscriberProject\\_test\\controllers.test.js",
+          "file": "\\_test\\controllers.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should go to users name page",
+              "fullTitle": "users with filter should go to users name page",
+              "timedOut": false,
+              "duration": 11,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai\n  .request(\"http://localhost:3000\")\n  .get(\"/subscribers/names\")\n  .end((err, res) => {\n    if (err) {\n      console.log(err);\n    } else {\n      res.body.should.be.a(\"array\");\n      res.should.have.status(200);\n    }\n    done();\n  });",
+              "err": {},
+              "uuid": "9d4d8108-9ace-4983-9d59-130a39841fb0",
+              "parentUUID": "44cbe6c2-604e-451f-bb66-abf6ea258cce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9d4d8108-9ace-4983-9d59-130a39841fb0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "602d451f-6f4e-4f81-a817-c199bc3b2771",
+          "title": "gets user by id",
+          "fullFile": "E:\\Vs Code\\CodeBoxx\\BackendYTsubscriberProject\\_test\\controllers.test.js",
+          "file": "\\_test\\controllers.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should go to specific user page",
+              "fullTitle": "gets user by id should go to specific user page",
+              "timedOut": false,
+              "duration": 11,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai\n  .request(\"http://localhost:3000\")\n  .get(\"/subscribers/64b26c7447f97f43c4054231\")\n  .end((err, res) => {\n    if (err) {\n      console.log(err);\n    } else {\n    \n      res.body.should.be.a(\"object\");\n      res.should.have.status(200);\n    }\n    done();\n  });",
+              "err": {},
+              "uuid": "d1feeb00-1f65-4d32-a4da-3911490d6bdb",
+              "parentUUID": "602d451f-6f4e-4f81-a817-c199bc3b2771",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d1feeb00-1f65-4d32-a4da-3911490d6bdb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3c5b891c-bedd-4ce8-aae1-dd2c866d6c0d",
+          "title": "test for the landing page",
+          "fullFile": "E:\\Vs Code\\CodeBoxx\\BackendYTsubscriberProject\\_test\\Landingpage.test.js",
+          "file": "\\_test\\Landingpage.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "checking the res status code",
+              "fullTitle": "test for the landing page checking the res status code",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "chai\n  .request(server)\n  .get(\"/\")\n  .end((err, res) => {\n    res.should.have.status(200);\n  });\ndone();",
+              "err": {},
+              "uuid": "6c973f61-39f4-4fce-81bf-a7dde0c56ff1",
+              "parentUUID": "3c5b891c-bedd-4ce8-aae1-dd2c866d6c0d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6c973f61-39f4-4fce-81bf-a7dde0c56ff1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
