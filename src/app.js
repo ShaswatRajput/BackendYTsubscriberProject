@@ -4,10 +4,10 @@ const app = express();
 const router = require("./Routes/users.js");
 
 
-// app.use(express.json());
-// config({
-//   path:"../config.env"
-// })
+app.use(express.json());
+config({
+  path:"../config.env"
+})
 
 //use router as a middleware form express js
 app.use("/subscribers", router);

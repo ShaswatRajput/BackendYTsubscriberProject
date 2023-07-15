@@ -13,10 +13,10 @@ app.use(express.urlencoded({ extended: false }));
 
 // Connect to DATABASE
 
-mongoose.connect("mongodb+srv://shaswat1:test1235@cluster0.ppxminb.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection
 db.on('error', (err) => console.log(err))
 db.once('open', () => console.log('connected to database'))
 
 // Start Server
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+app.listen(process.env.PORT , () => console.log(`App listening on port ${port}!`))
