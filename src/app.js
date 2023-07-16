@@ -8,8 +8,7 @@ app.use(express.json());
 config({
   path:"../config.env"
 })
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }));
+
 //use router as a middleware form express js
 app.use("/subscribers", router);
 
