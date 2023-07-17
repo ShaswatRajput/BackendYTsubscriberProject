@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2023-07-15T18:39:13.654Z",
-    "end": "2023-07-15T18:39:13.760Z",
-    "duration": 106,
+    "start": "2023-07-17T14:29:45.131Z",
+    "end": "2023-07-17T14:29:45.199Z",
+    "duration": 68,
     "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d7897543-6d0c-46e9-b3bc-8d73d6c0dbed",
+      "uuid": "843bc2d6-3c00-42de-982f-183abe6c9d46",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "871606a9-7f49-4696-a3b9-3a92a23cf423",
+          "uuid": "2f79e5fb-e8ad-4bd9-b30a-a0babeb3dcdf",
           "title": "fetching all users",
           "fullFile": "E:\\Vs Code\\CodeBoxx\\BackendYTsubscriberProject\\_test\\controllers.test.js",
           "file": "\\_test\\controllers.test.js",
@@ -38,35 +38,35 @@
               "title": "gets all users",
               "fullTitle": "fetching all users gets all users",
               "timedOut": false,
-              "duration": 52,
+              "duration": 15,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "chai\n  .request(\"http://localhost:3000\")\n  .get(\"/subscribers\")\n  .end((err, res) => {\n    if (err) {\n      console.log(err);\n    } else {\n      res.body.should.be.a(\"array\");\n      res.should.have.status(200);\n    }\n    done();\n  });",
               "err": {},
-              "uuid": "165fa878-8457-4aab-a2d3-1a64663ace70",
-              "parentUUID": "871606a9-7f49-4696-a3b9-3a92a23cf423",
+              "uuid": "78ea9bf1-088e-41f4-a221-f9934a2e2fff",
+              "parentUUID": "2f79e5fb-e8ad-4bd9-b30a-a0babeb3dcdf",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "165fa878-8457-4aab-a2d3-1a64663ace70"
+            "78ea9bf1-088e-41f4-a221-f9934a2e2fff"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 52,
+          "duration": 15,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "44cbe6c2-604e-451f-bb66-abf6ea258cce",
+          "uuid": "3ae35b81-6abf-4b16-a101-2b2e91aea9d0",
           "title": "users with filter",
           "fullFile": "E:\\Vs Code\\CodeBoxx\\BackendYTsubscriberProject\\_test\\controllers.test.js",
           "file": "\\_test\\controllers.test.js",
@@ -77,7 +77,7 @@
               "title": "should go to users name page",
               "fullTitle": "users with filter should go to users name page",
               "timedOut": false,
-              "duration": 11,
+              "duration": 5,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -86,26 +86,26 @@
               "context": null,
               "code": "chai\n  .request(\"http://localhost:3000\")\n  .get(\"/subscribers/names\")\n  .end((err, res) => {\n    if (err) {\n      console.log(err);\n    } else {\n      res.body.should.be.a(\"array\");\n      res.should.have.status(200);\n    }\n    done();\n  });",
               "err": {},
-              "uuid": "9d4d8108-9ace-4983-9d59-130a39841fb0",
-              "parentUUID": "44cbe6c2-604e-451f-bb66-abf6ea258cce",
+              "uuid": "351c01e1-9e28-4775-b592-0be9147a280f",
+              "parentUUID": "3ae35b81-6abf-4b16-a101-2b2e91aea9d0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9d4d8108-9ace-4983-9d59-130a39841fb0"
+            "351c01e1-9e28-4775-b592-0be9147a280f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11,
+          "duration": 5,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "602d451f-6f4e-4f81-a817-c199bc3b2771",
+          "uuid": "5c9f859e-0f12-4d4c-896e-71eeb1b53590",
           "title": "gets user by id",
           "fullFile": "E:\\Vs Code\\CodeBoxx\\BackendYTsubscriberProject\\_test\\controllers.test.js",
           "file": "\\_test\\controllers.test.js",
@@ -116,7 +116,7 @@
               "title": "should go to specific user page",
               "fullTitle": "gets user by id should go to specific user page",
               "timedOut": false,
-              "duration": 11,
+              "duration": 4,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -125,26 +125,26 @@
               "context": null,
               "code": "chai\n  .request(\"http://localhost:3000\")\n  .get(\"/subscribers/64b26c7447f97f43c4054231\")\n  .end((err, res) => {\n    if (err) {\n      console.log(err);\n    } else {\n    \n      res.body.should.be.a(\"object\");\n      res.should.have.status(200);\n    }\n    done();\n  });",
               "err": {},
-              "uuid": "d1feeb00-1f65-4d32-a4da-3911490d6bdb",
-              "parentUUID": "602d451f-6f4e-4f81-a817-c199bc3b2771",
+              "uuid": "ab9a131f-2317-40d9-93c4-e7f2a42c4c10",
+              "parentUUID": "5c9f859e-0f12-4d4c-896e-71eeb1b53590",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d1feeb00-1f65-4d32-a4da-3911490d6bdb"
+            "ab9a131f-2317-40d9-93c4-e7f2a42c4c10"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11,
+          "duration": 4,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "3c5b891c-bedd-4ce8-aae1-dd2c866d6c0d",
+          "uuid": "d1c34884-0746-46d5-af70-30ed9cbc54c2",
           "title": "test for the landing page",
           "fullFile": "E:\\Vs Code\\CodeBoxx\\BackendYTsubscriberProject\\_test\\Landingpage.test.js",
           "file": "\\_test\\Landingpage.test.js",
@@ -155,7 +155,7 @@
               "title": "checking the res status code",
               "fullTitle": "test for the landing page checking the res status code",
               "timedOut": false,
-              "duration": 4,
+              "duration": 8,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -164,20 +164,20 @@
               "context": null,
               "code": "chai\n  .request(server)\n  .get(\"/\")\n  .end((err, res) => {\n    res.should.have.status(200);\n  });\ndone();",
               "err": {},
-              "uuid": "6c973f61-39f4-4fce-81bf-a7dde0c56ff1",
-              "parentUUID": "3c5b891c-bedd-4ce8-aae1-dd2c866d6c0d",
+              "uuid": "3239394c-5e7f-403c-a89e-b639a56296b0",
+              "parentUUID": "d1c34884-0746-46d5-af70-30ed9cbc54c2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6c973f61-39f4-4fce-81bf-a7dde0c56ff1"
+            "3239394c-5e7f-403c-a89e-b639a56296b0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4,
+          "duration": 8,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
