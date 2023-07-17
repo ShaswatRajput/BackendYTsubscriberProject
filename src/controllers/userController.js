@@ -57,7 +57,7 @@ const getUserNames = async (req, res) => {
 //       res.status(200).json(nameData)
 
 //     } catch (err){
-//       res.status(400).send(`there was an error : ${err}`)
+//        res.status(400).send(`there was an error : ${err}`)
 //     }
 
 //   }
