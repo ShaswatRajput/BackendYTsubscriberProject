@@ -1,5 +1,5 @@
 const express = require("express")
-const {getAllUsers, getUserById,getUserNames, createNewUser} = require("../controllers/userController.js")
+const {getAllUsers, getUserById,getUserNames} = require("../controllers/userController.js")
 
 //Router Middleware from Express JS
 const router = express.Router()
@@ -12,7 +12,6 @@ router.get("/names",getUserNames)
 
 //for getting a user's details by specific id (using id as params)
 router.get("/:id",getUserById)
-router.post("/post",createNewUser)
 
 
 //export
