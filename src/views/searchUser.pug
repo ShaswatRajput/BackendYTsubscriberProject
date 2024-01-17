@@ -1,0 +1,18 @@
+extends base.pug
+
+block content
+    h1 search page 
+    h2 search by name 
+    form(action="/searchpage", method="post")
+    label(for="name") Name:
+    input(type="text", name="name", required)
+    br
+    button(type="submit") Submit
+    br
+    h2 search by id 
+    form(action="/searchpage", method="post")
+    label(for="id") ID:
+    input(type="text", name="id", required)
+    br
+    button(type="submit") Submit
+    

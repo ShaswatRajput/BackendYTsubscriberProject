@@ -1,0 +1,16 @@
+extends base.pug
+
+block content
+  h2 Contact Form
+  h3 Enter Name and Subscribed Channel Name
+  form(action="/subscribers/contactpage", method="post")
+    label(for="name") Name:
+    input(type="text", name="name", required)
+    br
+
+    label(for="subscribedChannel") Channel:
+    input(type="text", name="subscribedChannel", required)
+
+    
+
+    button(type="submit", (click)='console.log("clicked")') Submit

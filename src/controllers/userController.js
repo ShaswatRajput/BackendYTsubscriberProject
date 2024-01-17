@@ -8,7 +8,8 @@ const getAllUsers = async (req, res) => {
     const data = await subscribers.find({}).select("-__v");
 
     //response
-    res.status(200).json(data);
+    // res.status(200).json(data);
+    res.status(200).render("allData",{data})
   } catch (err) {
     //error
     res.status(400).json({ err: err.message });
@@ -20,12 +21,13 @@ const getAllUsers = async (req, res) => {
 const getUserById = async (req, res) => {
   try {
     //getting value of id from params
-    const { id } = req.params;
+    const id = req.body;
+    console.log(id)
     //Query for getting user by Id
     const IdData = await subscribers.findOne({ _id: id }).select("-__v");
 
     //response
-    res.status(200).json(IdData);
+    res.status(200).send('found')
   } catch (err) {
     //error
     res.status(400).send(`No such id exists. Message : ${err}`);
@@ -50,29 +52,31 @@ const getUserNames = async (req, res) => {
 
 //-------------------------------DumpBin---------------------------------------------------
 
-//   const getUserByName = async (req,res)=>{
-//     try{
-//       const {name} = req.params
-//       const nameData = await subscribers.find({name}).select("-__v")
-//       res.status(200).json(nameData)
+  const getUserByName = async (req,res)=>{
+    try{
+      const {name} = req.body
+      const nameData = await subscribers.find({name}).select("-__v")
+      res.status(200).render("searchResults",{"results": nameData})
+      console.log(nameData)
+      
+    } catch (err){
+       res.status(400).send(`there was an error : ${err}`)
+       console.log(err)
+    }
 
-//     } catch (err){
-//        res.status(400).send(`there was an error : ${err}`)
-//     }
+  }
+ const createNewUser = async (req,res)=>{
+    // const { name, subscribedChannel } = req.body;
+  try {
+    const newEntry = await subscribers.create(req.body)
+    res.status(201).render("allData",{"data": newEntry})
 
-//   }
-//  const createNewUser = async (req,res)=>{
-//     const { name, subscribedChannel } = req.body;
-//   try {
-//     const newEntry = await subscribers.create({name, subscribedChannel})
-//     res.status(201).json(newEntry)
+    } catch (err)
+    {
+        res.status(400).json({ err: err.message });
+    }
 
-//     } catch (err)
-//     {
-//         res.status(400).json({ err: err.message });
-//     }
-
-// }
+}
 //   const UpdateUser = async (req,res) => {
 //     try{
 //     const {id} = req.params
@@ -98,4 +102,4 @@ const getUserNames = async (req, res) => {
 //   }
 
 
-module.exports = { getAllUsers, getUserById, getUserNames };
+module.exports = { getAllUsers, getUserById, getUserNames,createNewUser, getUserByName};
