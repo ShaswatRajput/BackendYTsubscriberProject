@@ -15,4 +15,4 @@ db.on('error', (err) => console.log(err))
 db.once('open', () => console.log('connected to database'))
 
 // Start Server
-app.listen(process.env.PORT , () => console.log(`App listening on port ${port}!`))
+app.listen(process.env.PORT , () => console.log(`App listening on port ${process.env.PORT}!`))
