@@ -9,7 +9,7 @@ const getAllUsers = async (req, res) => {
 
     //response
     // res.status(200).json(data);
-    res.status(200).json(data)
+    res.status(200).json({data})
   } catch (err) {
     //error
     res.status(400).json({ err: err.message });
@@ -27,7 +27,7 @@ const getUserById = async (req, res) => {
     const IdData = await subscribers.findOne({ _id: id }).select("-__v");
 
     //response
-    res.status(200).json(IdData)
+    res.status(200).json({IdData})
   } catch (err) {
     //error
     res.status(400).send(`No such id exists. Message : ${err}`);
@@ -43,7 +43,7 @@ const getUserNames = async (req, res) => {
       .find({}, { name: 1, subscribedChannel: 1 })
       .select("-_id");
     //response with 200 status code for successful execution
-    res.status(200).json(data);
+    res.status(200).json({data});
   } catch (err) {
     //error
     res.status(400).json({ err: err.message });
