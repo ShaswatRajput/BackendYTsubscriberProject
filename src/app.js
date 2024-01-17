@@ -1,13 +1,11 @@
-const { config } = require("dotenv")
+
 const express = require("express");
 const app = express();
 const router = require("./Routes/users.js");
 
 
 app.use(express.json());
-config({
-  path:"../.env"
-})
+
 
 //use router as a middleware form express js
 app.use("/subscribers", router);
