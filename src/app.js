@@ -46,6 +46,6 @@ app.get("/", (req, res) => {
     </li>
     </ul>`);
 });
->>>>>>> e172ee41a693ebc71cc6878b5994eabfea43ab63
+
 
 module.exports = app;
