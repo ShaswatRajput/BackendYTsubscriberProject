@@ -50,6 +50,21 @@ const getUserNames = async (req, res) => {
   }
 };
 
+const createNewUser = async (req,res)=>{
+    
+  try {
+    const newEntry = await subscribers.create(req.body)
+    res.status(201).json({
+      msg:"successful",
+      newEntry
+    })
+
+    } catch (err)
+    {
+        res.status(400).json({ err: err.message });
+    }
+
+}
 //-------------------------------DumpBin---------------------------------------------------
 
 //   const getUserByName = async (req,res)=>{
@@ -65,18 +80,7 @@ const getUserNames = async (req, res) => {
 //     }
 
 //   }
-//  const createNewUser = async (req,res)=>{
-//     // const { name, subscribedChannel } = req.body;
-//   try {
-//     const newEntry = await subscribers.create(req.body)
-//     res.status(201).json("allData",{"data": newEntry})
-
-//     } catch (err)
-//     {
-//         res.status(400).json({ err: err.message });
-//     }
-
-// }
+ 
 //   const UpdateUser = async (req,res) => {
 //     try{
 //     const {id} = req.params
@@ -102,4 +106,4 @@ const getUserNames = async (req, res) => {
 //   }
 
 
-module.exports = { getAllUsers, getUserById, getUserNames};
+module.exports = { getAllUsers, getUserById, getUserNames,createNewUser};
