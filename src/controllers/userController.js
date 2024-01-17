@@ -9,7 +9,7 @@ const getAllUsers = async (req, res) => {
 
     //response
     // res.status(200).json(data);
-    res.status(200).json("allData",{data})
+    res.status(200).json(data)
   } catch (err) {
     //error
     res.status(400).json({ err: err.message });
@@ -21,13 +21,13 @@ const getAllUsers = async (req, res) => {
 const getUserById = async (req, res) => {
   try {
     //getting value of id 
-    const id = req.body;
-    console.log(id)
+    const id = req.params.id;
+    
     //Query for getting user by Id
     const IdData = await subscribers.findOne({ _id: id }).select("-__v");
 
     //response
-    res.status(200).send('found')
+    res.status(200).json(IdData)
   } catch (err) {
     //error
     res.status(400).send(`No such id exists. Message : ${err}`);
