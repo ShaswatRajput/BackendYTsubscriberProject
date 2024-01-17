@@ -14,7 +14,7 @@ app.use("/subscribers", router);
 
 //Home Page
 app.get("/", (req, res) => {
-  res.send(`<h1>Hello,my name is Shaswat Kumar and this is a Backend API for getting Subscribers from mongoDatabase.</h1>
+  res.send(`<h1>Hello,My name is Shaswat Kumar and this is a set of Backend APIs for getting Subscribers from MongoDB database.</h1>
     <ul>
     <li>
     1.If you want to get all users with all info then add <button><b><i>/subscribers</i></b></button> to the url.
