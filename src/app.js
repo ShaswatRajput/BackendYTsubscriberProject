@@ -9,7 +9,7 @@ const { getUserByName, getUserById } = require("./controllers/userController.js"
 app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());
 config({
-  path:"../config.env"
+  path:"../.env"
 })
 
 //use router as a middleware form express js
