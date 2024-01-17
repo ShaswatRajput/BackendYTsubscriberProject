@@ -102,4 +102,4 @@ const getUserNames = async (req, res) => {
 //   }
 
 
-module.exports = { getAllUsers, getUserById, getUserNames,createNewUser, getUserByName};
+module.exports = { getAllUsers, getUserById, getUserNames};
