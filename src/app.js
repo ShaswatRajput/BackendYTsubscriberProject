@@ -3,8 +3,7 @@ const express = require("express");
 const app = express();
 const router = require("./Routes/users.js");
 const path = require("path")
-const bodyparser = require("body-parser") 
-const { getUserByName, getUserById } = require("./controllers/userController.js")
+
 
 app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());
@@ -15,21 +14,21 @@ config({
 //use router as a middleware form express js
 app.use("/subscribers", router);
 
-app.use("./static",express.static("static"))
+// app.use("./static",express.static("static"))
 
-app.set('view engine',"pug")
-app.set("views",path.join(__dirname,"views"))
+// app.set('view engine',"pug")
+// app.set("views",path.join(__dirname,"views"))
 
-app.get("/",(req,res)=>{
-  res.status(200).render("homepage")
-})
-app.get("/contactpage",(req,res)=>{
-  res.status(200).render("contactform")
-})
-app.get("/searchpage",(req,res)=>{
-  res.status(200).render("searchUser")
-})
-app.post("/searchpage",getUserByName)
+// app.get("/",(req,res)=>{
+//   res.status(200).render("homepage")
+// })
+// app.get("/contactpage",(req,res)=>{
+//   res.status(200).render("contactform")
+// })
+// app.get("/searchpage",(req,res)=>{
+//   res.status(200).render("searchUser")
+// })
+// app.post("/searchpage",getUserByName)
 
 
 app.get("/", (req, res) => {
