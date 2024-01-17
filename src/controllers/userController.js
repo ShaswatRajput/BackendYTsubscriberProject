@@ -20,7 +20,7 @@ const getAllUsers = async (req, res) => {
 
 const getUserById = async (req, res) => {
   try {
-    //getting value of id from params
+    //getting value of id 
     const id = req.body;
     console.log(id)
     //Query for getting user by Id

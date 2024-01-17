@@ -11,7 +11,7 @@ router.get("/",getAllUsers)
 router.get("/names",getUserNames)
 
 //for getting a user's details by specific id (using id as params)
-// router.get("/:id",getUserById)
+router.get("/:id",getUserById)
 
 router.post("/contactpage",createNewUser)
 
