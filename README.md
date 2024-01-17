@@ -6,7 +6,7 @@ Following actions can be done with the help of the api
 <ul>
   <li><b><i>/subscribers</i></b> Get all the subscribers</li>
   <li><b><i>/subscribers/name</i></b> Get subscribers only by name and subscribed channel field</li>
-  <li><b><i>/subscribers:id</i></b> Find and get data with a specific user ID</li>
+  <li><b><i>/subscribers/:id</i></b> Find and get data with a specific user ID</li>
 </ul>
 
 In this project I have used:-
