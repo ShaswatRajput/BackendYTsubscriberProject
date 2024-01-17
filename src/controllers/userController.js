@@ -9,7 +9,7 @@ const getAllUsers = async (req, res) => {
 
     //response
     // res.status(200).json(data);
-    res.status(200).render("allData",{data})
+    res.status(200).json("allData",{data})
   } catch (err) {
     //error
     res.status(400).json({ err: err.message });
@@ -56,7 +56,7 @@ const getUserNames = async (req, res) => {
 //     try{
 //       const {name} = req.body
 //       const nameData = await subscribers.find({name}).select("-__v")
-//       res.status(200).render("searchResults",{"results": nameData})
+//       res.status(200).json("searchResults",{"results": nameData})
 //       console.log(nameData)
       
 //     } catch (err){
@@ -69,7 +69,7 @@ const getUserNames = async (req, res) => {
 //     // const { name, subscribedChannel } = req.body;
 //   try {
 //     const newEntry = await subscribers.create(req.body)
-//     res.status(201).render("allData",{"data": newEntry})
+//     res.status(201).json("allData",{"data": newEntry})
 
 //     } catch (err)
 //     {

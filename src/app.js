@@ -2,10 +2,8 @@ const { config } = require("dotenv")
 const express = require("express");
 const app = express();
 const router = require("./Routes/users.js");
-const path = require("path")
 
 
-app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());
 config({
   path:"../.env"
